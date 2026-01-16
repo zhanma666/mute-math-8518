@@ -1,0 +1,178 @@
+.professional-selector {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.selection-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  text-align: left;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
+}
+
+/* 专业选择网格 */
+.professional-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.professional-card {
+  background-color: var(--card-color);
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.professional-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.professional-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.professional-card:hover::before {
+  transform: scaleX(1);
+}
+
+.professional-card.selected {
+  background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+  border-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.professional-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.professional-card.selected .professional-name {
+  color: var(--primary-color);
+}
+
+.professional-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.professional-card.selected .professional-description {
+  color: var(--text-primary);
+}
+
+/* 时长选择 */
+.duration-options {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.duration-button {
+  background-color: var(--card-color);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.9rem 1.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.duration-button:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.duration-button.selected {
+  background: var(--primary-gradient);
+  border-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .professional-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .professional-card {
+    padding: 1.25rem;
+  }
+
+  .professional-name {
+    font-size: 1.1rem;
+  }
+
+  .professional-description {
+    font-size: 0.95rem;
+  }
+
+  .duration-options {
+    gap: 1rem;
+  }
+
+  .duration-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .professional-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .duration-options {
+    justify-content: center;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+}

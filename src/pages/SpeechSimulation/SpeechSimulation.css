@@ -1,0 +1,425 @@
+.speech-simulation-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  position: relative;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* 页面标题 */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: var(--primary-color);
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
+}
+
+/* 返回按钮 */
+.back-button {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--card-color);
+  color: var(--text-secondary);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.back-button:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* 计时器部分 */
+.timer-section {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 控制按钮 */
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.start-speech-button, .stop-speech-button {
+  padding: 1.2rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid;
+  box-shadow: var(--shadow-lg);
+  letter-spacing: -0.01em;
+}
+
+.start-speech-button {
+  background: linear-gradient(135deg, var(--success-color), #34D399);
+  color: white;
+  border-color: var(--success-color);
+}
+
+.start-speech-button:hover {
+  background: linear-gradient(135deg, #059669, var(--success-color));
+  border-color: #059669;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.start-speech-button:active {
+  transform: translateY(-2px);
+}
+
+.stop-speech-button {
+  background: linear-gradient(135deg, var(--error-color), #F87171);
+  color: white;
+  border-color: var(--error-color);
+}
+
+.stop-speech-button:hover {
+  background: linear-gradient(135deg, #DC2626, var(--error-color));
+  border-color: #DC2626;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.stop-speech-button:active {
+  transform: translateY(-2px);
+}
+
+/* 背景装饰元素 */
+.background-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.decoration {
+  position: absolute;
+  animation: float 24s ease-in-out infinite;
+  opacity: 0.08;
+}
+
+.decoration-1 {
+  top: 15%;
+  left: 5%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  animation-delay: 0s;
+}
+
+.decoration-2 {
+  top: 30%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--success-color);
+  animation-delay: 7s;
+}
+
+.decoration-3 {
+  bottom: 25%;
+  left: 10%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--warning-color);
+  animation-delay: 14s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-35px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(20px) rotate(240deg);
+  }
+}
+
+/* 顶部激励语 */
+.motivational-header {
+  background: var(--info-gradient, linear-gradient(135deg, #3B82F6, #60A5FA));
+  color: white;
+  padding: 1.2rem 2rem;
+  border-radius: 16px;
+  margin: 2.5rem 0;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.motivational-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.motivational-header .highlight {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 演讲技巧提示 */
+.speech-tips {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 3rem 0;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.speech-tips p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .speech-simulation-container {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .back-button {
+    position: static;
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .timer-section {
+    margin: 2.5rem 0;
+  }
+
+  .control-buttons {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .start-speech-button, .stop-speech-button {
+    padding: 1.1rem 2.5rem;
+    width: 100%;
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .start-speech-button, .stop-speech-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* 语音转录显示 */
+.transcript-display {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-md);
+}
+
+.transcript-display h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.transcript-content {
+  min-height: 100px;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color-light);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.placeholder-text {
+  color: var(--text-placeholder);
+  font-style: italic;
+}
+
+.listening-indicator {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--success-color);
+  font-weight: 500;
+}
+
+/* 处理中覆盖层 */
+.processing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.processing-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 评估结果模态框样式 */
+.modal-evaluation-result {
+  width: 100%;
+  max-width: 500px;
+}
+
+.modal-evaluation-result h3 {
+  margin-top: 0;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.evaluation-details {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.evaluation-details p {
+  margin: 0.75rem 0;
+  color: var(--text-secondary);
+}
+
+.evaluation-details strong {
+  color: var(--text-primary);
+}
+
+.evaluation-feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-primary-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.modal-primary-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .transcript-display {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .transcript-content {
+    min-height: 80px;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .processing-content {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+}

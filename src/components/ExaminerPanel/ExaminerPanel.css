@@ -1,0 +1,123 @@
+.examiner-panel {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.examiner-list {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.examiner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.examiner-item:hover {
+  transform: translateY(-8px);
+}
+
+.examiner-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.examiner-avatar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-light)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.examiner-avatar:hover {
+  box-shadow: var(--shadow-xl);
+  transform: scale(1.05);
+}
+
+.examiner-info {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.examiner-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.examiner-role {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0.25rem 0 0 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .examiner-list {
+    gap: 2rem;
+  }
+
+  .examiner-avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .examiner-avatar svg {
+    width: 110px;
+    height: 110px;
+  }
+
+  .examiner-name {
+    font-size: 1.1rem;
+  }
+
+  .examiner-role {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .examiner-list {
+    gap: 1.25rem;
+  }
+
+  .examiner-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .examiner-avatar svg {
+    width: 90px;
+    height: 90px;
+  }
+
+  .examiner-name {
+    font-size: 1rem;
+  }
+
+  .examiner-role {
+    font-size: 0.85rem;
+  }
+}

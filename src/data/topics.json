@@ -1,0 +1,276 @@
+{
+  "professionals": [
+    {
+      "id": "cs",
+      "name": "计算机科学",
+      "description": "计算机科学相关专业的演讲题目"
+    },
+    {
+      "id": "ee",
+      "name": "电子工程",
+      "description": "电子工程相关专业的演讲题目"
+    },
+    {
+      "id": "me",
+      "name": "机械工程",
+      "description": "机械工程相关专业的演讲题目"
+    },
+    {
+      "id": "finance",
+      "name": "金融",
+      "description": "金融相关专业的演讲题目"
+    },
+    {
+      "id": "medicine",
+      "name": "医学",
+      "description": "医学相关专业的演讲题目"
+    }
+  ],
+  "topics": [
+    {
+      "id": "cs-1",
+      "content": "请谈谈你对人工智能在医疗领域应用的理解和未来发展趋势",
+      "category": "professional",
+      "professional": "cs",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cs-2",
+      "content": "请介绍你最熟悉的一种编程语言，并说明它的优缺点",
+      "category": "professional",
+      "professional": "cs",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cs-3",
+      "content": "请谈谈你对大数据技术的理解，以及它在各行业的应用",
+      "category": "professional",
+      "professional": "cs",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cs-4",
+      "content": "请介绍你的毕业设计或科研项目，包括项目背景、技术方案和成果",
+      "category": "experience",
+      "professional": "cs",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cs-5",
+      "content": "请谈谈你未来的研究方向和计划",
+      "category": "research",
+      "professional": "cs",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cs-6",
+      "content": "请谈谈你对区块链技术的理解和应用前景",
+      "category": "hot",
+      "professional": "cs",
+      "difficulty": "hard"
+    },
+    {
+      "id": "cs-7",
+      "content": "如果你的项目遇到了技术难题，你会如何解决？",
+      "category": "pressure",
+      "professional": "cs",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ee-1",
+      "content": "请谈谈你对5G技术的理解和应用前景",
+      "category": "professional",
+      "professional": "ee",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ee-2",
+      "content": "请介绍你最熟悉的一种电子电路设计工具",
+      "category": "professional",
+      "professional": "ee",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ee-3",
+      "content": "请谈谈你对可再生能源技术的理解和未来发展趋势",
+      "category": "professional",
+      "professional": "ee",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ee-4",
+      "content": "请介绍你的一个电子设计项目，包括设计思路、实现过程和测试结果",
+      "category": "experience",
+      "professional": "ee",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ee-5",
+      "content": "请谈谈你未来的研究方向和计划",
+      "category": "research",
+      "professional": "ee",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ee-6",
+      "content": "请谈谈你对物联网技术的理解和应用场景",
+      "category": "hot",
+      "professional": "ee",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ee-7",
+      "content": "如果你的电路设计出现了故障，你会如何排查和解决？",
+      "category": "pressure",
+      "professional": "ee",
+      "difficulty": "medium"
+    },
+    {
+      "id": "me-1",
+      "content": "请谈谈你对智能制造技术的理解和未来发展趋势",
+      "category": "professional",
+      "professional": "me",
+      "difficulty": "medium"
+    },
+    {
+      "id": "me-2",
+      "content": "请介绍你最熟悉的一种CAD软件及其应用",
+      "category": "professional",
+      "professional": "me",
+      "difficulty": "easy"
+    },
+    {
+      "id": "me-3",
+      "content": "请谈谈你对3D打印技术的理解和应用前景",
+      "category": "professional",
+      "professional": "me",
+      "difficulty": "medium"
+    },
+    {
+      "id": "me-4",
+      "content": "请介绍你的一个机械设计项目，包括设计思路、仿真过程和实验结果",
+      "category": "experience",
+      "professional": "me",
+      "difficulty": "medium"
+    },
+    {
+      "id": "me-5",
+      "content": "请谈谈你未来的研究方向和计划",
+      "category": "research",
+      "professional": "me",
+      "difficulty": "medium"
+    },
+    {
+      "id": "me-6",
+      "content": "请谈谈你对新能源汽车技术的理解和发展趋势",
+      "category": "hot",
+      "professional": "me",
+      "difficulty": "hard"
+    },
+    {
+      "id": "me-7",
+      "content": "如果你的机械设计在实验中出现了问题，你会如何改进？",
+      "category": "pressure",
+      "professional": "me",
+      "difficulty": "medium"
+    },
+    {
+      "id": "finance-1",
+      "content": "请谈谈你对金融科技（FinTech）的理解和应用前景",
+      "category": "professional",
+      "professional": "finance",
+      "difficulty": "medium"
+    },
+    {
+      "id": "finance-2",
+      "content": "请介绍你最熟悉的一种金融分析方法",
+      "category": "professional",
+      "professional": "finance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "finance-3",
+      "content": "请谈谈你对当前宏观经济形势的理解和判断",
+      "category": "professional",
+      "professional": "finance",
+      "difficulty": "medium"
+    },
+    {
+      "id": "finance-4",
+      "content": "请介绍你的一个金融分析项目，包括分析思路、数据处理和结论",
+      "category": "experience",
+      "professional": "finance",
+      "difficulty": "medium"
+    },
+    {
+      "id": "finance-5",
+      "content": "请谈谈你未来的研究方向和计划",
+      "category": "research",
+      "professional": "finance",
+      "difficulty": "medium"
+    },
+    {
+      "id": "finance-6",
+      "content": "请谈谈你对数字货币的理解和监管挑战",
+      "category": "hot",
+      "professional": "finance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "finance-7",
+      "content": "如果你的投资策略出现了亏损，你会如何调整？",
+      "category": "pressure",
+      "professional": "finance",
+      "difficulty": "medium"
+    },
+    {
+      "id": "medicine-1",
+      "content": "请谈谈你对精准医疗的理解和未来发展趋势",
+      "category": "professional",
+      "professional": "medicine",
+      "difficulty": "medium"
+    },
+    {
+      "id": "medicine-2",
+      "content": "请介绍你最熟悉的一种医学检测方法",
+      "category": "professional",
+      "professional": "medicine",
+      "difficulty": "easy"
+    },
+    {
+      "id": "medicine-3",
+      "content": "请谈谈你对人工智能在医学领域应用的理解",
+      "category": "professional",
+      "professional": "medicine",
+      "difficulty": "medium"
+    },
+    {
+      "id": "medicine-4",
+      "content": "请介绍你的一次临床实习经历，包括收获和体会",
+      "category": "experience",
+      "professional": "medicine",
+      "difficulty": "medium"
+    },
+    {
+      "id": "medicine-5",
+      "content": "请谈谈你未来的研究方向和计划",
+      "category": "research",
+      "professional": "medicine",
+      "difficulty": "medium"
+    },
+    {
+      "id": "medicine-6",
+      "content": "请谈谈你对全球公共卫生挑战的理解和应对策略",
+      "category": "hot",
+      "professional": "medicine",
+      "difficulty": "hard"
+    },
+    {
+      "id": "medicine-7",
+      "content": "如果你的患者对治疗方案有异议，你会如何沟通和处理？",
+      "category": "pressure",
+      "professional": "medicine",
+      "difficulty": "medium"
+    }
+  ]
+}
